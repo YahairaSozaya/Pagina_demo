@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA EJEMPLO</title>
+</head>
+<style>
+    body{
+        padding:0px;
+        margin:0px;
+        display:grid;
+        grid-template-rows: repeat (4, 1fr);
+        grid-template-areas: "nav"
+                            "edificio"
+                            "parrafo"
+                            "imagenes"
+    }
+
+
+    /*PRIMERA SECCION DE NAVEGACION*/
+    .seccion_navegacion{
+        grid-area: nav;
+        display:grid;
+        grid-template-columns: 100px 100px 100px 100px 1fr;
+        background: rgb(32, 32, 165);
+        grid-gap:5px; 
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navegacion{
+        padding:10px;
+        color:grey;    
+        justify-content: right;
+    }
+
+    button{
+        padding-left: 10px;
+        padding-right: 10px;
+        width:100px;
+    }
+
+    .lupa{
+        padding-right: 20px;
+        padding-left:20px;
+        text-align: end;
+        float:right;
+        border-radius: 10px;
+        height: 20px;
+        background-image: url('images/buscar.png');
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: right;
+        padding-right: 100px;
+    }
+
+
+    .lupa:hover{
+        border:none;
+        background-color: ghostwhite;
+    }
+
+    /*INICIA LA SECCION DE EDIFICIO*/
+    .edificios{
+        width:100%;
+        height: 400px;
+        position:absolute;
+        z-index:0;
+    }
+
+    .hero{
+        grid-area:edificio;
+        padding:0px;
+        margin:0px;    
+    }
+
+    .inf{
+        font-size: 20px;
+    }
+
+    .principal{
+        font-size: 40px;
+        color: #3b83bd;
+        font-weight: bolder;
+    }
+
+    .texto_encimado{
+        position:relative;
+        width:500px;
+        float: right;
+        background-color: transparent;
+        color:white;
+        z-index:1;
+        padding-bottom:100px;
+        padding-top: 50px;
+        text-align: right;
+        padding-right: 100px;
+    }
+
+    /*SECCION DE INFORMACION*/
+    
+    .informacion{
+        grid-area: parrafo;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 20px;
+        padding:30px;
+        padding-top: 0px;
+           
+    }
+
+    h2{
+        color: blue;
+    }
+
+    /*SECCION DE IMAGENES-ICONOS*/
+    .imagenes{
+        grid-area: imagenes;
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding:20px;  
+        grid-gap: 10px;
+        background-color: rgb(20, 160, 241);
+    }
+
+    .subima{
+        text-align: center;
+        border: 2px solid white;
+        border-radius: 10px;
+        padding:20px;
+    }
+
+    .imagen{
+        width: 25%;
+        
+    }
+
+</style>
+
+<body>
+    <section class="seccion_navegacion">
+        <div class="navegacion">
+            <button>HOME</button>
+        </div>
+        <div class="navegacion">
+            <button>ABOUT US</button>
+        </div>
+        <div class="navegacion">
+            <button>PROJECT</button>
+        </div>
+        <div class="navegacion">
+            <button>PORTFOLIO</button>
+        </div>
+        <div class="navegacion">
+            <input class="lupa" type="text">
+        </div>
+    </section>
+
+
+
+    <section class="hero">
+        <img class="edificios" src="images/edificios.jpg" alt="edificios">
+        <div class="texto_encimado">
+            <p class="principal">YOUR TEXT HERE</p>
+            <p class="inf">*Lorem ipsum</p>
+            <p class="inf">*Dolor Sit Amet</p>
+            <p class="inf">*Consectetur Adipiscing</p>
+        </div>
+
+    </section>
+
+
+
+
+    <section class="informacion">
+        <div class="subinfo">
+            <h2>YOUR TEXT HERE</h2>
+            <p>Una página web, página electrónica, página digital o ciberpágina1​2​ es un documento o información electrónica capaz de contener texto, sonido, vídeo, programas, enlaces, imágenes, hipervínculos y muchas otras cosas, adaptada para la llamada World Wide Web (WWW) y que puede ser accedida mediante un navegador web. </p>
+        </div>
+
+        <div class="subinfo">
+            <h2>YOUR TEXT HERE</h2>
+            <p>Una página web, página electrónica, página digital o ciberpágina1​2​ es un documento o información electrónica capaz de contener texto, sonido, vídeo, programas, enlaces, imágenes, hipervínculos y muchas otras cosas, adaptada para la llamada World Wide Web (WWW) y que puede ser accedida mediante un navegador web. </p>
+        </div>
+
+        <div class="subinfo">
+            <h2>YOUR TEXT HERE</h2>
+            <p>Una página web, página electrónica, página digital o ciberpágina1​2​ es un documento o información electrónica capaz de contener texto, sonido, vídeo, programas, enlaces, imágenes, hipervínculos y muchas otras cosas, adaptada para la llamada World Wide Web (WWW) y que puede ser accedida mediante un navegador web. </p>
+        </div>
+    </section>
+
+
+
+    <section class="imagenes">
+        <div class="subima">
+            <img class="imagen" src="images/personas.png" alt="personas">
+            <p>Put your text here</p>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="subima">
+            <img class="imagen" src="images/carrito.png" alt="personas">
+            <p>Put your text here</p>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="subima">
+            <img class="imagen" src="images/telefono.png" alt="personas">
+            <p>Put your text here</p>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+
+        <div class="subima">
+            <img class="imagen" src="images/casa.png" alt="personas">
+            <p>Put your text here</p>
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+    </section>
+
+
+</body>
+</html>
